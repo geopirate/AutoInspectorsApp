@@ -17,15 +17,8 @@ namespace AutoInspectors.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
+            ViewData["Message"] = "Some information about the team that built Auto Inspectors.";
+            // TODO: We need to make an much better about page
             return View();
         }
 

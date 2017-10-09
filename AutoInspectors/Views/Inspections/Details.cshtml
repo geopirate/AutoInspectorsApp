@@ -1,0 +1,102 @@
+﻿@model AutoInspectors.Models.Inspection
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inspection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTCCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DTCCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineOil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EngineOil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transmission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CoolantLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoolantLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CoolantPH)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoolantPH)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BrakeFluid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BrakeFluid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatteryTest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatteryTest)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternatorTest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlternatorTest)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AirFilter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AirFilter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoses)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hoses)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wires)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wires)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FrontBrakes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FrontBrakes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RearBrakes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RearBrakes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TireRotation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TireRotation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
