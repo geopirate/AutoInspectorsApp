@@ -1,0 +1,98 @@
+﻿@model AutoInspectors.Models.Inspection
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Inspection</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DTCCode" class="control-label"></label>
+                <input asp-for="DTCCode" class="form-control" />
+                <span asp-validation-for="DTCCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EngineOil" class="control-label"></label>
+                <input asp-for="EngineOil" class="form-control" />
+                <span asp-validation-for="EngineOil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transmission" class="control-label"></label>
+                <input asp-for="Transmission" class="form-control" />
+                <span asp-validation-for="Transmission" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolantLevel" class="control-label"></label>
+                <input asp-for="CoolantLevel" class="form-control" />
+                <span asp-validation-for="CoolantLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoolantPH" class="control-label"></label>
+                <input asp-for="CoolantPH" class="form-control" />
+                <span asp-validation-for="CoolantPH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrakeFluid" class="control-label"></label>
+                <input asp-for="BrakeFluid" class="form-control" />
+                <span asp-validation-for="BrakeFluid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatteryTest" class="control-label"></label>
+                <input asp-for="BatteryTest" class="form-control" />
+                <span asp-validation-for="BatteryTest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlternatorTest" class="control-label"></label>
+                <input asp-for="AlternatorTest" class="form-control" />
+                <span asp-validation-for="AlternatorTest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AirFilter" class="control-label"></label>
+                <input asp-for="AirFilter" class="form-control" />
+                <span asp-validation-for="AirFilter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hoses" class="control-label"></label>
+                <input asp-for="Hoses" class="form-control" />
+                <span asp-validation-for="Hoses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wires" class="control-label"></label>
+                <input asp-for="Wires" class="form-control" />
+                <span asp-validation-for="Wires" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FrontBrakes" class="control-label"></label>
+                <input asp-for="FrontBrakes" class="form-control" />
+                <span asp-validation-for="FrontBrakes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RearBrakes" class="control-label"></label>
+                <input asp-for="RearBrakes" class="form-control" />
+                <span asp-validation-for="RearBrakes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TireRotation" class="control-label"></label>
+                <input asp-for="TireRotation" class="form-control" />
+                <span asp-validation-for="TireRotation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
