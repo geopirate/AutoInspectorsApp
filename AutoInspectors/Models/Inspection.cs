@@ -8,29 +8,20 @@ namespace AutoInspectors.Models
 {   
     public class Inspection
     {
-<<<<<<< HEAD
-        public int ID { get; set; }
-        
-        [StringLength(100)]
-=======
+        [Key][StringLength(100)]
         public int InspectionID { get; set; }
 
->>>>>>> unit-tests
+
         [Display(Name = "DTC Code")]
         public string DTCCode { get; set; }
 
         [StringLength(100)]
         [Display(Name = "Engine Oil")]
         public string EngineOil { get; set; }
-<<<<<<< HEAD
         
         [StringLength(100)]
         [Display(Name = "Transmission Oil")]
-        public string Transmission { get; set; }
-=======
-
         public string TransmissionFluid { get; set; }
->>>>>>> unit-tests
 
         [StringLength(100)]
         [Display(Name = "Coolant Level")]

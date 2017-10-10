@@ -274,3 +274,8 @@ __pycache__/
 
 appsettings.json
 .vs/AutoInspectors/v15/sqlite3/storage.ide
+.vs/config/applicationhost.config
+.vs/AutoInspectors/v15/sqlite3/storage.ide
+.vs/AutoInspectorsApp/v15/.suo
+.vs/config/applicationhost.config
+.vs/slnx.sqlite
