@@ -33,5 +33,19 @@ namespace UnitTests.Tests
             Assert.NotInRange(2200, 1900, 2100);
         }
 
+        [Fact]
+        public void LicensePlateIsString()
+        {
+            // Arrange
+            var p = new Vehicle { LicensePlate = "UWATM8" };
+
+            //Act
+            p.LicensePlate = "AYYLMAO";
+
+            //Assert
+            Assert.IsType<string>(p.LicensePlate);
+        }
+
     }
 }
+
