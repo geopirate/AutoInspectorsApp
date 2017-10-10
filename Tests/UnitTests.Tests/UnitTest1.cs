@@ -1,5 +1,8 @@
+using AutoInspectors.Controllers;
 using AutoInspectors.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace UnitTests.Tests
@@ -45,6 +48,23 @@ namespace UnitTests.Tests
             //Assert
             Assert.IsType<string>(p.LicensePlate);
         }
+ 
+        [Fact]
+        public void HomeIndexResultIsView()
+        {
+            var controller = new AutoInspectors.Controllers.HomeController();
+
+            //Arrange
+            HomeController h = new AutoInspectors.Controllers.HomeController();
+
+            //Act
+            IActionResult result = h.Index();
+
+            //Assert
+            Assert.IsType<ViewResult>(result);
+        }
+
+
 
     }
 }
