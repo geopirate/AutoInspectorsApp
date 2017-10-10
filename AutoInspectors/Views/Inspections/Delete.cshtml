@@ -24,10 +24,10 @@
             @Html.DisplayFor(model => model.EngineOil)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Transmission)
+            @Html.DisplayNameFor(model => model.TransmissionFluid)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Transmission)
+            @Html.DisplayFor(model => model.TransmissionFluid)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.CoolantLevel)
@@ -98,7 +98,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="InspectionID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>

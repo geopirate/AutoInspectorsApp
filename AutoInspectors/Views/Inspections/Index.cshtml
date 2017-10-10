@@ -19,7 +19,7 @@
                     @Html.DisplayNameFor(model => model.EngineOil)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Transmission)
+                    @Html.DisplayNameFor(model => model.TransmissionFluid)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.CoolantLevel)
@@ -67,7 +67,7 @@
                 @Html.DisplayFor(modelItem => item.EngineOil)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Transmission)
+                @Html.DisplayFor(modelItem => item.TransmissionFluid)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CoolantLevel)
@@ -103,9 +103,9 @@
                 @Html.DisplayFor(modelItem => item.TireRotation)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.InspectionID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.InspectionID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.InspectionID">Delete</a>
             </td>
         </tr>
 }

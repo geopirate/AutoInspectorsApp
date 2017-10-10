@@ -10,7 +10,7 @@ namespace AutoInspectors.Models
     public class Vehicle
     {
         [Key]
-        public int ID { get; set; }
+        public int VehicleID { get; set; }
         [StringLength(17, MinimumLength = 2, ErrorMessage = "Please enter a valid VIN")] 
         [Required]
         public string VIN { get; set; }
@@ -44,5 +44,7 @@ namespace AutoInspectors.Models
         [Required]
         [Display(Name = "Transmission Type")]
         public string TransmissionType { get; set; }
+
+        List<Inspection> Inspections { get; set; }
     }
 }
