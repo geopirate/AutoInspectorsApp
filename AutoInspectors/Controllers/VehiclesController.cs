@@ -12,6 +12,8 @@ namespace AutoInspectors.Controllers
     public class VehiclesController : Controller
     {
         private readonly AutoInspectorsContext _context;
+        private class TransmissionType{ public string Name { get; set; } }
+        private SelectList TransTypes = new SelectList(new List<TransmissionType> { new TransmissionType { Name = "automatic" }, new TransmissionType { Name = "manual" } }, "Name", "Name" );
 
         public VehiclesController(AutoInspectorsContext context)
         {
@@ -45,6 +47,7 @@ namespace AutoInspectors.Controllers
         // GET: Vehicles/Create
         public IActionResult Create()
         {
+            ViewBag.TransmissionTypes = TransTypes;
             return View();
         }
 

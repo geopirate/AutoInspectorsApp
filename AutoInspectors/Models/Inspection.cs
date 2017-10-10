@@ -11,7 +11,6 @@ namespace AutoInspectors.Models
         [Key][StringLength(100)]
         public int InspectionID { get; set; }
 
-
         [Display(Name = "DTC Code")]
         public string DTCCode { get; set; }
 
