@@ -33,7 +33,7 @@ namespace AutoInspectors.Controllers
             }
 
             var inspection = await _context.Inspection
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.InspectionID == id);
             if (inspection == null)
             {
                 return NotFound();
@@ -72,7 +72,7 @@ namespace AutoInspectors.Controllers
                 return NotFound();
             }
 
-            var inspection = await _context.Inspection.SingleOrDefaultAsync(m => m.ID == id);
+            var inspection = await _context.Inspection.SingleOrDefaultAsync(m => m.InspectionID == id);
             if (inspection == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace AutoInspectors.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,DTCCode,EngineOil,Transmission,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation")] Inspection inspection)
         {
-            if (id != inspection.ID)
+            if (id != inspection.InspectionID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace AutoInspectors.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InspectionExists(inspection.ID))
+                    if (!InspectionExists(inspection.InspectionID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace AutoInspectors.Controllers
             }
 
             var inspection = await _context.Inspection
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.InspectionID == id);
             if (inspection == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace AutoInspectors.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var inspection = await _context.Inspection.SingleOrDefaultAsync(m => m.ID == id);
+            var inspection = await _context.Inspection.SingleOrDefaultAsync(m => m.InspectionID == id);
             _context.Inspection.Remove(inspection);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -146,7 +146,7 @@ namespace AutoInspectors.Controllers
 
         private bool InspectionExists(int id)
         {
-            return _context.Inspection.Any(e => e.ID == id);
+            return _context.Inspection.Any(e => e.InspectionID == id);
         }
     }
 }

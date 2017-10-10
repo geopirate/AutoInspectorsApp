@@ -8,7 +8,7 @@ namespace AutoInspectors.Models
 {
     public class Inspection
     {
-        public int ID { get; set; }
+        public int InspectionID { get; set; }
 
         [Display(Name = "DTC Code")]
         public string DTCCode { get; set; }
@@ -16,7 +16,7 @@ namespace AutoInspectors.Models
         [Display(Name = "Engine Oil")]
         public string EngineOil { get; set; }
 
-        public string Transmission { get; set; }
+        public string TransmissionFluid { get; set; }
 
         [Display(Name = "Coolant Level")]
         public string CoolantLevel { get; set; }
@@ -49,5 +49,8 @@ namespace AutoInspectors.Models
         [Display(Name = "Tire Rotation")]
         public string TireRotation { get; set; }
 
+        [Required]
+        public int VehicleID { get; set; }
+        public virtual Vehicle Vehicle { get; set; }
     }
 }
