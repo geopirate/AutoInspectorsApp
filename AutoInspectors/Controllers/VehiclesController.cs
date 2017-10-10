@@ -33,7 +33,7 @@ namespace AutoInspectors.Controllers
             }
 
             var vehicle = await _context.Vehicle
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.VehicleID == id);
             if (vehicle == null)
             {
                 return NotFound();
@@ -72,7 +72,7 @@ namespace AutoInspectors.Controllers
                 return NotFound();
             }
 
-            var vehicle = await _context.Vehicle.SingleOrDefaultAsync(m => m.ID == id);
+            var vehicle = await _context.Vehicle.SingleOrDefaultAsync(m => m.VehicleID == id);
             if (vehicle == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace AutoInspectors.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,VIN,LicensePlate,Mileage,Year,Make,Model,EngineSize,TransmissionType")] Vehicle vehicle)
         {
-            if (id != vehicle.ID)
+            if (id != vehicle.VehicleID)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace AutoInspectors.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!VehicleExists(vehicle.ID))
+                    if (!VehicleExists(vehicle.VehicleID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace AutoInspectors.Controllers
             }
 
             var vehicle = await _context.Vehicle
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.VehicleID == id);
             if (vehicle == null)
             {
                 return NotFound();
@@ -138,7 +138,7 @@ namespace AutoInspectors.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var vehicle = await _context.Vehicle.SingleOrDefaultAsync(m => m.ID == id);
+            var vehicle = await _context.Vehicle.SingleOrDefaultAsync(m => m.VehicleID == id);
             _context.Vehicle.Remove(vehicle);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -146,7 +146,7 @@ namespace AutoInspectors.Controllers
 
         private bool VehicleExists(int id)
         {
-            return _context.Vehicle.Any(e => e.ID == id);
+            return _context.Vehicle.Any(e => e.VehicleID == id);
         }
     }
 }
