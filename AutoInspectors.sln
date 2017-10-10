@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoInspectors", "AutoInspectors\AutoInspectors.csproj", "{53404071-A0DF-4AD0-9C34-6761995B6D5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoInspectors", "AutoInspectors\AutoInspectors.csproj", "{53404071-A0DF-4AD0-9C34-6761995B6D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{01F6CE80-F7C5-4CB6-9D89-D54589D7895B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Tests", "Tests\UnitTests.Tests\UnitTests.Tests.csproj", "{90FF30AB-2F40-4354-9265-46227A092897}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{53404071-A0DF-4AD0-9C34-6761995B6D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53404071-A0DF-4AD0-9C34-6761995B6D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53404071-A0DF-4AD0-9C34-6761995B6D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FF30AB-2F40-4354-9265-46227A092897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FF30AB-2F40-4354-9265-46227A092897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FF30AB-2F40-4354-9265-46227A092897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FF30AB-2F40-4354-9265-46227A092897}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90FF30AB-2F40-4354-9265-46227A092897} = {01F6CE80-F7C5-4CB6-9D89-D54589D7895B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E608BAE-9BB3-4A2A-8EAD-B413EE3847E2}
