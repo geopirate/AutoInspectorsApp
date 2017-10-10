@@ -80,6 +80,7 @@ namespace AutoInspectors.Controllers
             {
                 return NotFound();
             }
+            ViewBag.TransmissionTypes = TransTypes;
             return View(vehicle);
         }
 
