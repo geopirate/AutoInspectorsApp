@@ -8,7 +8,7 @@ namespace AutoInspectors.Models
 {   
     public class Inspection
     {
-        [Key][StringLength(100)]
+        [Key]
         public int InspectionID { get; set; }
 
         [Display(Name = "DTC Code")]
