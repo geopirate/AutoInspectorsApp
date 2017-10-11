@@ -8,8 +8,10 @@ namespace AutoInspectors.Controllers
 {
     public class SummaryController : Controller
     {
+
         public IActionResult Index()
         {
+
             return View();
         }
 
