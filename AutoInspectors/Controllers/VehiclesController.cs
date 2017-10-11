@@ -13,7 +13,7 @@ namespace AutoInspectors.Controllers
     {
         private readonly AutoInspectorsContext _context;
         private class TransmissionType{ public string Name { get; set; } }
-        private SelectList TransTypes = new SelectList(new List<TransmissionType> { new TransmissionType { Name = "automatic" }, new TransmissionType { Name = "manual" } }, "Name", "Name" );
+        private SelectList TransTypes = new SelectList(new List<TransmissionType> { new TransmissionType { Name = "Automatic" }, new TransmissionType { Name = "Manual" } }, "Name", "Name" );
 
         public VehiclesController(AutoInspectorsContext context)
         {
@@ -116,6 +116,7 @@ namespace AutoInspectors.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.TransmissionTypes = TransTypes;
             return View(vehicle);
         }
 
