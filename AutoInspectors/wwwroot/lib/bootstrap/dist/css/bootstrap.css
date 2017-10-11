@@ -6805,7 +6805,7 @@ button.close {
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)
     }
 
-    .carousel-control.right {
+    .carousel-control.right {      
         left: auto;
         right: 0;
         background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0, rgba(0,0,0,0.5) 100%);
