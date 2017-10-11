@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoInspectors.Models
 {   
-    //This is the Vehical model with validation
+    //This is the Vehicle model with validation
     public class Vehicle
     {
         [Key]
@@ -15,7 +15,7 @@ namespace AutoInspectors.Models
         [Required]
         public string VIN { get; set; }
         
-        [StringLength(5, MinimumLength = 2)]
+        [StringLength(7, MinimumLength = 2)]
         [Required]
         [Display(Name = "License Plate Number")]
         public string LicensePlate { get; set; }

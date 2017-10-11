@@ -69,5 +69,8 @@ namespace AutoInspectors.Models
         [Required]
         public int VehicleID { get; set; }
         public virtual Vehicle Vehicle { get; set; }
+
+        [Required]
+        public string Inspector { get; set; }
     }
 }
