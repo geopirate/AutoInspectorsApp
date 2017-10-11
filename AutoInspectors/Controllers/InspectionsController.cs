@@ -6,19 +6,43 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AutoInspectors.Models;
+using System.IO;
+using Newtonsoft.Json;
+
 
 namespace AutoInspectors.Controllers
 {
     public class InspectionsController : Controller
     {
         private readonly AutoInspectorsContext _context;
-        
-        
+
+        List<string> inspectorList = ReadFile();
+
+        public static List<string> ReadFile()
+        {
+            string inspectorData = @"data.txt";
+
+            List<string> dataList = new List<string>();
+
+            using (StreamReader r = new StreamReader(inspectorData))
+            {
+
+                // Use while != null pattern for loop
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    dataList.Add(line);
+                }
+
+                return dataList;
+            }
+        }
+
 
         public InspectionsController(AutoInspectorsContext context)
         {
             _context = context;
-           
+
         }
 
 
@@ -50,8 +74,10 @@ namespace AutoInspectors.Controllers
         // GET: Inspections/Create
         public IActionResult Create()
         {
-            IQueryable<Vehicle> VehicleQuery = from v in _context.Vehicle select v;
+            IQueryable < Vehicle > VehicleQuery = from v in _context.Vehicle select v;
             ViewBag.VehicleInfo = new SelectList(VehicleQuery, "VehicleID", "LicensePlate");
+
+            ViewBag.InspectorList = new SelectList(inspectorList);
             return View();
         }
 

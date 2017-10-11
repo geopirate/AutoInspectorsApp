@@ -11,9 +11,10 @@ using System;
 namespace AutoInspectors.Migrations
 {
     [DbContext(typeof(AutoInspectorsContext))]
-    partial class AutoInspectorsContextModelSnapshot : ModelSnapshot
+    [Migration("20171011181421_NewInspectorField")]
+    partial class NewInspectorField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
