@@ -86,7 +86,7 @@ namespace AutoInspectors.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,DTCCode,EngineOil,Transmission,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation")] Inspection inspection)
+        public async Task<IActionResult> Create([Bind("ID,DTCCode,EngineOil,Transmission,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation,VehicleID")] Inspection inspection)
         {
             if (ModelState.IsValid)
             {
