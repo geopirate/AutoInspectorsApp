@@ -12,11 +12,16 @@ namespace AutoInspectors.Controllers
     public class InspectionsController : Controller
     {
         private readonly AutoInspectorsContext _context;
+        
+        
 
         public InspectionsController(AutoInspectorsContext context)
         {
             _context = context;
+           
         }
+
+
 
         // GET: Inspections
         public async Task<IActionResult> Index()
@@ -45,6 +50,8 @@ namespace AutoInspectors.Controllers
         // GET: Inspections/Create
         public IActionResult Create()
         {
+            IQueryable<Vehicle> VehicleQuery = from v in _context.Vehicle select v;
+            ViewBag.VehicleInfo = new SelectList(VehicleQuery, "VehicleID", "LicensePlate");
             return View();
         }
 
@@ -77,6 +84,8 @@ namespace AutoInspectors.Controllers
             {
                 return NotFound();
             }
+            IQueryable<Vehicle> VehicleQuery = from v in _context.Vehicle select v;
+            ViewBag.VehicleInfo = new SelectList(VehicleQuery, "VehicleID", "LicensePlate");
             return View(inspection);
         }
 
