@@ -89,7 +89,7 @@ namespace AutoInspectors.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,VIN,LicensePlate,Mileage,Year,Make,Model,EngineSize,TransmissionType")] Vehicle vehicle)
+        public async Task<IActionResult> Edit(int id, [Bind("VehicleID,VIN,LicensePlate,Mileage,Year,Make,Model,EngineSize,TransmissionType")] Vehicle vehicle)
         {
             if (id != vehicle.VehicleID)
             {
