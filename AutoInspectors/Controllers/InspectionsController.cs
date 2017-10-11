@@ -40,7 +40,8 @@ namespace AutoInspectors.Controllers
             }
             catch
             {
-                return ErrorViewModel
+                // need to return something here.
+                return dataList;
             }
         }
 
