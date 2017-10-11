@@ -51,7 +51,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="TransmissionType" class="control-label"></label>
-                <select asp-for="TransmissionType" class="form-control" asp-items="ViewBag.TransmissionTypes" />
+                <select asp-for="TransmissionType" class="form-control" asp-items="ViewBag.TransmissionTypes">
+                <option value="">-- Select Transmission --</option></select>
                 <span asp-validation-for="TransmissionType" class="text-danger"></span>
             </div>
             <div class="form-group">

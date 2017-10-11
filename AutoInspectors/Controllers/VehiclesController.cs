@@ -116,6 +116,7 @@ namespace AutoInspectors.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.TransmissionTypes = TransTypes;
             return View(vehicle);
         }
 
