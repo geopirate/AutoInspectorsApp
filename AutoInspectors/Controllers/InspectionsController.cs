@@ -86,7 +86,7 @@ namespace AutoInspectors.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,DTCCode,EngineOil,TransmissionFluid,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation,VehicleID")] Inspection inspection)
+
         {
             if (ModelState.IsValid)
             {
@@ -112,7 +112,6 @@ namespace AutoInspectors.Controllers
             }
             IQueryable<Vehicle> VehicleQuery = from v in _context.Vehicle select v;
             ViewBag.VehicleInfo = new SelectList(VehicleQuery, "VehicleID", "LicensePlate");
-
             ViewBag.InspectorList = new SelectList(inspectorList);
             return View(inspection);
         }
@@ -122,7 +121,7 @@ namespace AutoInspectors.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,DTCCode,EngineOil,Transmission,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation")] Inspection inspection)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,DTCCode,EngineOil,TransmissionFluid,CoolantLevel,CoolantPH,BrakeFluid,BatteryTest,AlternatorTest,AirFilter,Hoses,Wires,FrontBrakes,RearBrakes,TireRotation")] Inspection inspection)
         {
             if (id != inspection.InspectionID)
             {

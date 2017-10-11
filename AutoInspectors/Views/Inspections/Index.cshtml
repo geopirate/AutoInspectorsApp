@@ -16,103 +16,116 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.DTCCode)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.EngineOil)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TransmissionFluid)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CoolantLevel)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CoolantPH)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BrakeFluid)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BatteryTest)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AlternatorTest)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AirFilter)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Hoses)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Wires)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.FrontBrakes)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RearBrakes)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TireRotation)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inspector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DTCCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineOil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransmissionFluid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoolantLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoolantPH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrakeFluid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BatteryTest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlternatorTest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirFilter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hoses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wires)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontBrakes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RearBrakes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TireRotation)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DTCCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineOil)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TransmissionFluid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CoolantLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CoolantPH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrakeFluid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BatteryTest)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlternatorTest)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AirFilter)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hoses)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Wires)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FrontBrakes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RearBrakes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TireRotation)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.InspectionID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.InspectionID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.InspectionID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Inspector)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTCCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EngineOil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransmissionFluid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoolantLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoolantPH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BrakeFluid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BatteryTest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlternatorTest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirFilter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hoses)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wires)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FrontBrakes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RearBrakes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TireRotation)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.InspectionID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.InspectionID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.InspectionID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 <p>
